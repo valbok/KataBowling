@@ -34,3 +34,11 @@ Implementation of a Kata Bowling task: http://codingdojo.org/cgi-bin/index.pl?Ka
  "9-9-9-9-9-9-9-9-9-9-" (20 rolls: 10 pairs of 9 and miss) = 9 + 9 + 9 + 9 + 9 + 9 + 9 + 9 + 9 + 9 = 90 
  "5/5/5/5/5/5/5/5/5/5/5" (21 rolls: 10 pairs of 5 and spare, with a final 5) = 10+5 + 10+5 + 10+5 + 10+5 + 10+5 + 10+5 + 10+5 + 10+5 + 10+5 + 10+5 = 150
 
+--------
+Please take a look at tests.php
+There you will see some test cases.
+
+Basically there are 3 logical layers in this solution:
+1. Game or the top layer which does not know about encoding rolls, format validation or frames. Only knows about how to calculate total score based on frames.
+2. Frame layer which does not about how to calculate total score, how to encode or decode rolls. Used only to define how many pins have been knocked down per each try.
+3. Parser layer does not know about how to calculate any scores but responsible to translate/extract encoded rolls string to list of frames.
