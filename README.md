@@ -21,10 +21,9 @@ In each frame, the bowler gets up to two tries to knock down all the pins.
 - If he gets a spare or strike in the last (tenth) frame, the bowler gets to throw one or two more bonus balls, respectively. These bonus throws are taken as part of the same turn. If the bonus throws knock down all the pins, the process does not repeat: the bonus throws are only used to calculate the score of the final frame. 
 - The game score is the total of all frame scores. 
 
- * Clues 
+* Clues 
 
 What makes this game interesting to score is the lookahead in the scoring for strike and spare. At the time we throw a strike or spare, we cannot calculate the frame score: we have to wait one or two frames to find out what the bonus is. 
-
 Suggested Test Cases 
 
 (When scoring "X" indicates a strike, "/" indicates a spare, "-" indicates a miss) 
